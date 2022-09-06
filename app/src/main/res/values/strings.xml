@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">API Web Services</string>
+    <string name="game_title">Título del Juego</string>
+    <string name="title_list">Juegos Free to Play</string>
+    <string name="title_favorites">Favoritos</string>
+    <string name="title_detail">Detalle</string>
+    <string name="release_date_label">Release date:</string>
+    <string name="release_date_example">30-nov-2020</string>
+    <string name="publisher_example">Ubisoft</string>
+    <string name="publisher_label">Publisher:</string>
+    <string name="developer_example">Ubisoft Montreal</string>
+    <string name="developer_label">Developer:</string>
+    <string name="platform_example">PC</string>
+    <string name="platform_label">Platform:</string>
+    <string name="genre_example">Action</string>
+    <string name="genre_label">Genre:</string>
+    <string name="summary">Resumen</string>
+</resources>
