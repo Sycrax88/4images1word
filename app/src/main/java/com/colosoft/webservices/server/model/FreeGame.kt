@@ -2,6 +2,7 @@ package com.colosoft.webservices.server.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class FreeGame(
     @SerializedName("developer")
@@ -26,4 +27,4 @@ data class FreeGame(
     val thumbnail: String?,
     @SerializedName("title")
     val title: String?
-)
+):Serializable

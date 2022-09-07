@@ -19,7 +19,7 @@ class ListViewModel : ViewModel() {
     fun getGames() {
         viewModelScope.launch {
             val gamesList : FreeGamesList = gamesRepository.getGames()
-            _gamesLoaded.postValue(gamesList.games as ArrayList<FreeGame>)
+            _gamesLoaded.postValue(gamesList as ArrayList<FreeGame>)
         }
     }
 }

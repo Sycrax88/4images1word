@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.colosoft.webservices.databinding.FragmentListBinding
 import com.colosoft.webservices.server.model.FreeGame
@@ -29,7 +30,7 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        gamesAdapter = GamesAdapter(gamesList, onItemClicked = { })
+        gamesAdapter = GamesAdapter(gamesList, onItemClicked = {onGameItemClicked(it)})
 
         listBinding.gamesRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@ListFragment.requireContext())
@@ -42,6 +43,10 @@ class ListFragment : Fragment() {
         }
 
         listViewModel.getGames()
+    }
+
+    private fun onGameItemClicked(game: FreeGame) {
+        findNavController().navigate(ListFragmentDirections.actionNavigationListToDetailFragment(game))
     }
 
     private fun onGamesLoadedSubscribe(gamesList: ArrayList<FreeGame>?) {

@@ -31,6 +31,6 @@
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="game"
-            app:argType="com.cubidevs.mobiedbapp2022.server.model.FreeGame" />
+            app:argType="com.colosoft.webservices.server.model.FreeGame" />
     </fragment>
 </navigation>

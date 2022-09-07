@@ -40,7 +40,7 @@ class GamesAdapter(
                 with(binding){
                     gameTitleTextView.text = game.title
                     genreTextView.text = game.genre
-                    platformLabelTextView.text = game.platform
+                    platformTextView.text = game.platform
                     Picasso.get().load("https://www.freetogame.com/g/"+game.id.toString()+"/thumbnail.jpg").into(posterImageView)
                 }
             }

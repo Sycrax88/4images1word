@@ -10,7 +10,7 @@ object FreeGameDB {
     private const val  urlAPI="https://www.freetogame.com/api/"
 
     private val okHttpClient = OkHttpClient.Builder()
-        .addInterceptor((HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)))
+        .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
         .build()
 
     val retrofit: ApiService = Retrofit.Builder()

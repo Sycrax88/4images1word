@@ -6,7 +6,7 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET("https://www.freetogame.com/api/games\n")
-    fun getGames(): FreeGamesList
+    @GET("games")
+    suspend fun getGames(): FreeGamesList
 
 }
