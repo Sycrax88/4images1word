@@ -7,6 +7,6 @@
         android:title="@string/title_list" />
     <item
         android:id="@+id/navigation_favorites"
-        android:icon="@drawable/ic_favorites"
+        android:icon="@drawable/ic_favorites_border"
         android:title="@string/title_favorites" />
 </menu>
