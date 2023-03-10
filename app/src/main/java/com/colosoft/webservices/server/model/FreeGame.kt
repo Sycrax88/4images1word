@@ -18,5 +18,15 @@ data class FreeGame(
     @SerializedName("image4_url")
     val image4url: String?,
     @SerializedName("answer")
-    val answer: String?
+    val answer: String?,
+    @SerializedName("hint")
+    val hint: String?,
+    @SerializedName("description_image1")
+    val descriptionImage1: String?,
+    @SerializedName("description_image2")
+    val descriptionImage2: String?,
+    @SerializedName("description_image3")
+    val descriptionImage3: String?,
+    @SerializedName("description_image4")
+    val descriptionImage4: String?
 ):Serializable
