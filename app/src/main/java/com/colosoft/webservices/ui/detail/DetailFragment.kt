@@ -45,7 +45,7 @@ class DetailFragment : Fragment() {
 
 
         with(detailBinding){
-            gameTitleTextView.text = game.title
+            levelTextView.text = game.title
             releaseDateTextView.text = game.releaseDate
             publisherTextView.text = game.publisher
             developerTextView.text = game.developer

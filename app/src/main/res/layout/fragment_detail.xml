@@ -19,7 +19,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/game_title_text_view"
+        android:id="@+id/level_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -45,7 +45,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_title_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/level_text_view" />
 
     <TextView
         android:id="@+id/publisher_text_view_label"
@@ -94,7 +94,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/release_date_example"
         app:layout_constraintStart_toEndOf="@+id/release_date_label_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/game_title_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/level_text_view" />
 
     <TextView
         android:id="@+id/developer_text_view"
@@ -124,7 +124,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/platform_example"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_title_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/level_text_view" />
 
     <TextView
         android:id="@+id/genre_text_view"
@@ -147,7 +147,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/platform_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/game_title_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/level_text_view" />
 
     <TextView
         android:id="@+id/genre_text_view_label"
@@ -184,4 +184,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poster_image_view"
         app:srcCompat="@drawable/ic_favorites_border" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
