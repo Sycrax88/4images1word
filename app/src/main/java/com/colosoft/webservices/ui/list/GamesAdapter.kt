@@ -38,10 +38,7 @@ class GamesAdapter(
 
             fun bindGame(game: FreeGame){
                 with(binding){
-                    gameTitleTextView.text = game.title
-                    genreTextView.text = game.genre
-                    platformTextView.text = game.platform
-                    Picasso.get().load("https://www.freetogame.com/g/"+game.id.toString()+"/thumbnail.jpg").into(posterImageView)
+                    levelTextView.text = game.levelName
                 }
             }
         }

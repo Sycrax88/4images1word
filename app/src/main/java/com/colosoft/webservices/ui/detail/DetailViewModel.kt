@@ -20,14 +20,12 @@ class DetailViewModel : ViewModel() {
     fun addGameToFavorites(game: FreeGame) {
         val localGame = LocalGame(
             id = game.id,
-            name= game.title,
-            releaseDate = game.releaseDate,
-            publisher = game.publisher,
-            developer = game.developer,
-            platform = game.platform,
-            genre= game.genre,
-            summary = game.shortDescription)
-
+            levelName = game.levelName,
+            image1url = game.image1url,
+            image2url = game.image2url,
+            image3url = game.image3url,
+            image4url = game.image4url,
+            answer = game.answer)
 
         viewModelScope.launch {
             localGamesRepository.saveGame(localGame)

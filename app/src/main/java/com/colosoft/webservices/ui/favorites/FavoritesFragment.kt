@@ -50,7 +50,7 @@ class FavoritesFragment : Fragment() {
         val alertDialog: AlertDialog? = activity?.let {
             val builder = AlertDialog.Builder(it)
             builder.apply {
-                setMessage("Do you want to delete ${localGame.name} from your favorites?")
+                setMessage("Do you want to delete ${localGame.levelName} from your favorites?")
                 setPositiveButton(R.string.accept){ dialog, id ->
                     favoritesViewModel.deleteGame(localGame)
                     favoritesViewModel.loadGames()

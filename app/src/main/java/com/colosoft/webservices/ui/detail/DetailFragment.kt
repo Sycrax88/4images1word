@@ -45,18 +45,16 @@ class DetailFragment : Fragment() {
 
 
         with(detailBinding){
-            levelTextView.text = game.title
-            releaseDateTextView.text = game.releaseDate
-            publisherTextView.text = game.publisher
-            developerTextView.text = game.developer
-            platformTextView.text = game.platform
-            genreTextView.text = game.genre
-            shortDescriptionTextView.text = game.shortDescription
-            Picasso.get().load("https://www.freetogame.com/g/"+game.id.toString()+"/thumbnail.jpg").into(posterImageView)
+            levelTextView.text = game.levelName
+
+            Picasso.get().load(game.image1url).into(image1)
+            Picasso.get().load(game.image2url).into(image2)
+            Picasso.get().load(game.image3url).into(image3)
+            Picasso.get().load(game.image4url).into(image4)
 
             favoritesImageView.setOnClickListener {
                 if (gameExistAux)
-                    Toast.makeText(context, "${game.title} is already in your favorites list.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "${game.levelName} is already in your favorites list.", Toast.LENGTH_LONG).show()
                 else{
                     detailBinding.favoritesImageView.setImageDrawable(resources.getDrawable(R.drawable.ic_favorites))
                     gameExistAux = true

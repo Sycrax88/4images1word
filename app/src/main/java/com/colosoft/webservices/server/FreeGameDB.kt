@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object FreeGameDB {
 
-    private const val  urlAPI="https://www.freetogame.com/api/"
+    private const val  urlAPI="https://640b38c681d8a32198dded03.mockapi.io/"
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))

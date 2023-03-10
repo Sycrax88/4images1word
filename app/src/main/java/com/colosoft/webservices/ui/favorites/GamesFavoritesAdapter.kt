@@ -41,10 +41,8 @@ class GamesFavoritesAdapter (
 
         fun bindGame(game: LocalGame){
             with(binding){
-                gameTitleTextView.text = game.name
-                genreTextView.text = game.genre
-                platformTextView.text = game.platform
-                Picasso.get().load("https://www.freetogame.com/g/"+game.id.toString()+"/thumbnail.jpg").into(posterImageView)
+                levelTextView.text = game.levelName
+                //Picasso.get().load("https://www.freetogame.com/g/"+game.id.toString()+"/thumbnail.jpg").into(posterImageView)
             }
         }
     }
