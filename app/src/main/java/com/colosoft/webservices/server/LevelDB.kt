@@ -5,7 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object FreeGameDB {
+object LevelDB {
 
     private const val  urlAPI="https://640b38c681d8a32198dded03.mockapi.io/"
 

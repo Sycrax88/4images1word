@@ -6,18 +6,17 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.colosoft.webservices.local.LocalGame
 import com.colosoft.webservices.local.repository.LocalGamesRepository
-import com.colosoft.webservices.server.model.FreeGame
+import com.colosoft.webservices.server.model.Level
 import kotlinx.coroutines.launch
-import java.sql.Types.NULL
 
 class DetailViewModel : ViewModel() {
 
     val localGamesRepository = LocalGamesRepository()
 
-    private val _gameExist : MutableLiveData<Boolean> = MutableLiveData()
-    val gameExist: LiveData<Boolean> = _gameExist
+    private val _finishedLevel : MutableLiveData<Boolean> = MutableLiveData()
+    val finishedLevel: LiveData<Boolean> = _finishedLevel
 
-    fun addGameToFavorites(game: FreeGame) {
+    fun addLevelToFinished(game: Level) {
         val localGame = LocalGame(
             id = game.id,
             levelName = game.levelName,
@@ -40,13 +39,17 @@ class DetailViewModel : ViewModel() {
 
     }
 
-    fun searchGame(id: Int?) {
-        var gameExistAux = false
+    fun searchLevel(id: Int?) {
+        var finishedLevelAux = false
         viewModelScope.launch {
-            val localGame = localGamesRepository.searchGame(id)
+            val localGame = localGamesRepository.searchLevel(id)
             if (localGame != null)
-                gameExistAux = true
-            _gameExist.postValue(gameExistAux)
+                finishedLevelAux = true
+            _finishedLevel.postValue(finishedLevelAux)
         }
+    }
+
+    fun incrementAttempts(attempts: Int): Int {
+        return attempts + 1
     }
 }

@@ -8,15 +8,15 @@ class LocalGamesRepository {
 
     suspend fun saveGame(localGame: LocalGame) {
         val gameDao : GameDao = WebServices.database.GameDao()
-        gameDao.createGame(localGame)
+        gameDao.createLevel(localGame)
     }
 
-    suspend fun getGames() = WebServices.database.GameDao().getGames()
+    suspend fun getLevels() = WebServices.database.GameDao().getLevels()
 
-    suspend fun deleteGame(localGame: LocalGame) {
+    suspend fun deleteLevel(localGame: LocalGame) {
         val gameDao : GameDao = WebServices.database.GameDao()
-        gameDao.deleteGame(localGame)
+        gameDao.deleteLevel(localGame)
     }
 
-    suspend fun searchGame(id: Int?) = WebServices.database.GameDao().searchGame(id)
+    suspend fun searchLevel(id: Int?) = WebServices.database.GameDao().searchLevel(id)
 }

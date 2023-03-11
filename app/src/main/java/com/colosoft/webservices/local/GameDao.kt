@@ -9,14 +9,14 @@ import androidx.room.Query
 interface GameDao {
 
     @Insert
-    suspend fun createGame(game: LocalGame)
+    suspend fun createLevel(game: LocalGame)
 
     @Query("SELECT * FROM table_game")
-    suspend fun getGames() : MutableList<LocalGame>
+    suspend fun getLevels() : MutableList<LocalGame>
 
     @Delete
-    suspend fun deleteGame(localGame: LocalGame)
+    suspend fun deleteLevel(localGame: LocalGame)
 
     @Query("SELECT * FROM table_game WHERE id LIKE :id")
-    suspend fun searchGame(id: Int?): LocalGame
+    suspend fun searchLevel(id: Int?): LocalGame
 }

@@ -4,7 +4,7 @@ package com.colosoft.webservices.server.model
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class FreeGame(
+data class Level(
     @SerializedName("id")
     val id: Int?,
     @SerializedName("level_name")

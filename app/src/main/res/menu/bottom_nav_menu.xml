@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_list"
         android:title="@string/title_list" />
     <item
-        android:id="@+id/navigation_favorites"
-        android:icon="@drawable/ic_favorites_border"
-        android:title="@string/title_favorites" />
+        android:id="@+id/navigation_finished"
+        android:icon="@drawable/ic_complete"
+        android:title="@string/title_finished" />
 </menu>

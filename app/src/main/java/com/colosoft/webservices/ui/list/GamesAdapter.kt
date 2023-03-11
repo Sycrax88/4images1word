@@ -6,12 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.colosoft.webservices.R
 import com.colosoft.webservices.databinding.CardViewItemGameBinding
-import com.colosoft.webservices.server.model.FreeGame
-import com.squareup.picasso.Picasso
+import com.colosoft.webservices.server.model.Level
 
 class GamesAdapter(
-    private val gamesList: ArrayList<FreeGame>,
-    private val onItemClicked: (FreeGame) -> Unit
+    private val gamesList: ArrayList<Level>,
+    private val onItemClicked: (Level) -> Unit
     ) : RecyclerView.Adapter<GamesAdapter.GameViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameViewHolder {
@@ -27,7 +26,7 @@ class GamesAdapter(
 
     override fun getItemCount(): Int = gamesList.size
 
-    fun appendItems(newList: ArrayList<FreeGame>){
+    fun appendItems(newList: ArrayList<Level>){
         gamesList.clear()
         gamesList.addAll(newList)
         notifyDataSetChanged()
@@ -36,7 +35,7 @@ class GamesAdapter(
         class  GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
             private val binding = CardViewItemGameBinding.bind(itemView)
 
-            fun bindGame(game: FreeGame){
+            fun bindGame(game: Level){
                 with(binding){
                     levelTextView.text = game.levelName
                 }

@@ -16,12 +16,12 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_favorites"
-        android:name="com.colosoft.webservices.ui.favorites.FavoritesFragment"
-        android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_favorites" >
+        android:id="@+id/navigation_finished"
+        android:name="com.colosoft.webservices.ui.finishedlevels.FinishedLevelsFragment"
+        android:label="@string/title_finished"
+        tools:layout="@layout/fragment_finished_levels" >
         <action
-            android:id="@+id/action_navigation_favorites_to_detailFragment"
+            android:id="@+id/action_navigation_finished_to_detailFragment"
             app:destination="@id/navigation_detail" />
     </fragment>
     <fragment
@@ -31,6 +31,6 @@
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="game"
-            app:argType="com.colosoft.webservices.server.model.FreeGame" />
+            app:argType="com.colosoft.webservices.server.model.Level" />
     </fragment>
 </navigation>

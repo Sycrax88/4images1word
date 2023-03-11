@@ -12,6 +12,7 @@
         android:layout_height="146dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:clickable="true"
         android:contentDescription="@null"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +24,7 @@
         android:id="@+id/level_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-black"
         android:includeFontPadding="false"
         android:text="@string/level_title"
@@ -33,16 +34,17 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_image_3" />
+        app:layout_constraintTop_toBottomOf="@+id/image3" />
 
     <ImageView
         android:id="@+id/favorites_image_view"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginEnd="28dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/level_text_view"
-        app:srcCompat="@drawable/ic_favorites_border"
+        app:srcCompat="@drawable/ic_complete"
         tools:layout_editor_absoluteY="386dp" />
 
     <ImageView
@@ -51,6 +53,7 @@
         android:layout_height="146dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -61,6 +64,7 @@
         android:layout_height="146dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image1"
         tools:srcCompat="@tools:sample/avatars" />
@@ -71,24 +75,27 @@
         android:layout_height="146dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image2"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/description_image_1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/description_label"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/image1"
         app:layout_constraintStart_toStartOf="@+id/image1"
         app:layout_constraintTop_toBottomOf="@+id/image1" />
 
     <TextView
         android:id="@+id/description_image_3"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/description_label"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/image3"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/image3"
@@ -96,27 +103,52 @@
 
     <TextView
         android:id="@+id/initial_hint"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/initial_hint"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/level_text_view"
         app:layout_constraintStart_toStartOf="@+id/level_text_view"
         app:layout_constraintTop_toBottomOf="@+id/level_text_view" />
 
     <TextView
-        android:id="@+id/description_image_4"
+        android:id="@+id/hint_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/hint"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/shown_hint_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/initial_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hint_label"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/description_image_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="@string/description_label"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/image4"
         app:layout_constraintStart_toStartOf="@+id/image4"
         app:layout_constraintTop_toBottomOf="@+id/image4" />
 
     <TextView
         android:id="@+id/description_image_2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/description_label"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/image2"
         app:layout_constraintStart_toStartOf="@+id/image2"
         app:layout_constraintTop_toBottomOf="@+id/image2" />
@@ -128,6 +160,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/initial_hint">
@@ -138,7 +171,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
             android:hint="@string/layout_level"
-            android:inputType="textCapCharacters" />
+            android:inputType="textCapCharacters"
+            android:textAlignment="center" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -146,11 +180,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:text="@string/validate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/hint_label" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

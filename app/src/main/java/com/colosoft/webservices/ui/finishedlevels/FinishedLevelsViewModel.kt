@@ -1,4 +1,4 @@
-package com.colosoft.webservices.ui.favorites
+package com.colosoft.webservices.ui.finishedlevels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,10 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.colosoft.webservices.local.LocalGame
 import com.colosoft.webservices.local.repository.LocalGamesRepository
-import com.colosoft.webservices.server.model.FreeGame
 import kotlinx.coroutines.launch
 
-class FavoritesViewModel : ViewModel() {
+class FinishedLevelsViewModel : ViewModel() {
 
     var localGamesRepository = LocalGamesRepository()
 
@@ -18,14 +17,14 @@ class FavoritesViewModel : ViewModel() {
 
     fun loadGames() {
         viewModelScope.launch{
-            val listFavoritesGames = localGamesRepository.getGames()
-            _gamesLoaded.postValue(listFavoritesGames as ArrayList<LocalGame> /* = java.util.ArrayList<com.colosoft.webservices.local.LocalGame> */)
+            val listFinishedLevels = localGamesRepository.getLevels()
+            _gamesLoaded.postValue(listFinishedLevels as ArrayList<LocalGame> /* = java.util.ArrayList<com.colosoft.webservices.local.LocalGame> */)
         }
     }
 
-    fun deleteGame(localGame: LocalGame) {
+    fun deleteLevel(localGame: LocalGame) {
         viewModelScope.launch {
-            localGamesRepository.deleteGame(localGame)
+            localGamesRepository.deleteLevel(localGame)
         }
     }
 
