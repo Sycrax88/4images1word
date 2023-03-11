@@ -23,7 +23,7 @@
         android:id="@+id/level_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-black"
         android:includeFontPadding="false"
         android:text="@string/level_title"
@@ -33,7 +33,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image1" />
+        app:layout_constraintTop_toBottomOf="@+id/description_image_3" />
 
     <ImageView
         android:id="@+id/favorites_image_view"
@@ -60,7 +60,7 @@
         android:layout_width="159dp"
         android:layout_height="146dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image1"
         tools:srcCompat="@tools:sample/avatars" />
@@ -69,10 +69,88 @@
         android:id="@+id/image4"
         android:layout_width="159dp"
         android:layout_height="146dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image2"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/description_image_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description_label"
+        app:layout_constraintEnd_toEndOf="@+id/image1"
+        app:layout_constraintStart_toStartOf="@+id/image1"
+        app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+    <TextView
+        android:id="@+id/description_image_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description_label"
+        app:layout_constraintEnd_toEndOf="@+id/image3"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/image3"
+        app:layout_constraintTop_toBottomOf="@+id/image3" />
+
+    <TextView
+        android:id="@+id/initial_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_hint"
+        app:layout_constraintEnd_toEndOf="@+id/level_text_view"
+        app:layout_constraintStart_toStartOf="@+id/level_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/level_text_view" />
+
+    <TextView
+        android:id="@+id/description_image_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description_label"
+        app:layout_constraintEnd_toEndOf="@+id/image4"
+        app:layout_constraintStart_toStartOf="@+id/image4"
+        app:layout_constraintTop_toBottomOf="@+id/image4" />
+
+    <TextView
+        android:id="@+id/description_image_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description_label"
+        app:layout_constraintEnd_toEndOf="@+id/image2"
+        app:layout_constraintStart_toStartOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@+id/image2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/initial_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/answer_input_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:hint="@string/layout_level"
+            android:inputType="textCapCharacters" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/validate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/validate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

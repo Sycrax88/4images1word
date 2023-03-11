@@ -25,7 +25,13 @@ class DetailViewModel : ViewModel() {
             image2url = game.image2url,
             image3url = game.image3url,
             image4url = game.image4url,
-            answer = game.answer)
+            answer = game.answer,
+            hint = game.hint,
+            descriptionImage1 = game.descriptionImage1,
+            descriptionImage2 = game.descriptionImage2,
+            descriptionImage3 = game.descriptionImage3,
+            descriptionImage4 = game.descriptionImage4
+            )
 
         viewModelScope.launch {
             localGamesRepository.saveGame(localGame)
