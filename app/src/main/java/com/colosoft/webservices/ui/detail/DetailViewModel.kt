@@ -52,4 +52,8 @@ class DetailViewModel : ViewModel() {
     fun incrementAttempts(attempts: Int): Int {
         return attempts + 1
     }
+
+    fun countSpace(text: String): Int {
+        return text.count { it == ' ' }
+    }
 }

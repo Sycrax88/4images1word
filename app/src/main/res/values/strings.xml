@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">4 Images - 1 Word</string>
+    <string name="app_name">4 Images - 1 Sentence</string>
     <string name="level_title">Level Title</string>
     <string name="title_list">Levels</string>
     <string name="title_finished">Finished Levels</string>
@@ -7,7 +7,7 @@
     <string name="initial_hint">Initial Hint</string>
     <string name="hint">Hint:</string>
     <string name="validate">Validate</string>
-    <string name="layout_level">Write the word</string>
+    <string name="layout_level">Write the sentence</string>
     <string name="correct_answer">The Answer is Correct!</string>
     <string name="wrong_answer">The Answer is Wrong!</string>
     <string name="answer">Answer</string>

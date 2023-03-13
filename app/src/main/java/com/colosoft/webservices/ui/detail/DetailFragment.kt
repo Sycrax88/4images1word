@@ -57,7 +57,7 @@ class DetailFragment : Fragment() {
             descriptionImage4.visibility = View.GONE;
 
             levelTextView.text = game.levelName
-            initialHint.text = "Number of letters: " + game.answer?.length.toString();
+            initialHint.text = "Number of letters: " + game.answer?.length.toString() + ", including "+ detailViewModel.countSpace(game.answer.toString())+ " spaces.";
             descriptionImage1.text = game.descriptionImage1
             descriptionImage2.text = game.descriptionImage2
             descriptionImage3.text = game.descriptionImage3
