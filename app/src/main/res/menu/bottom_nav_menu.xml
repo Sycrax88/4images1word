@@ -7,6 +7,6 @@
         android:title="@string/title_list" />
     <item
         android:id="@+id/navigation_finished"
-        android:icon="@drawable/ic_complete"
+        android:icon="@drawable/two_motor_flags"
         android:title="@string/title_finished" />
 </menu>

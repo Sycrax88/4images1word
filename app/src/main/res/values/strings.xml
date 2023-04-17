@@ -3,6 +3,7 @@
     <string name="level_title">Level Title</string>
     <string name="title_list">Levels</string>
     <string name="title_finished">Finished Levels</string>
+    <string name="title_main_menu">Main Menu</string>
     <string name="description_label">Description</string>
     <string name="initial_hint">Initial Hint</string>
     <string name="hint">Hint:</string>
@@ -14,4 +15,5 @@
     <string name="title_detail">Details</string>
     <string name="accept">Accept</string>
     <string name="cancel">Cancel</string>
+    <string name="start_game">Start Game</string>
 </resources>

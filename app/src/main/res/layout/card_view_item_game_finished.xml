@@ -11,17 +11,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#96F4A9">
+        android:background="@color/purple_700">
 
         <TextView
             android:id="@+id/level_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="150dp"
             android:layout_marginBottom="16dp"
             android:text="@string/level_title"
-            android:textColor="@color/black"
+            android:textColor="?attr/editTextColor"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -37,7 +37,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:text="-"
-            android:textColor="@color/black"
+            android:textColor="?attr/editTextColor"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:text="@string/answer"
-            android:textColor="@color/black"
+            android:textColor="?attr/editTextColor"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
